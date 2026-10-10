@@ -4,6 +4,7 @@ import OverviewPage from './pages/OverviewPage';
 import InvestigationsPage from './pages/InvestigationsPage';
 import ThreatIntelligencePage from './pages/ThreatIntelligencePage';
 import ResearchLabPage from './pages/ResearchLabPage';
+import ReportsPage from './pages/ReportsPage';
 import EvidenceSubmissionWorkspace from './components/EvidenceSubmissionWorkspace';
 import EvidenceResultView from './components/EvidenceResultView';
 import './styles/globals.css';
@@ -60,14 +61,7 @@ export default function App() {
       case 'research_lab':
         return <ResearchLabPage />;
       case 'reports':
-        return (
-          <div style={{ maxWidth: '1000px', margin: '3rem auto', textAlign: 'center', color: 'var(--text-secondary)' }}>
-            <h2>Investigation Reports</h2>
-            <p style={{ marginTop: '0.5rem' }}>
-              Select any case from the Investigations tab to generate exportable forensic summaries.
-            </p>
-          </div>
-        );
+        return <ReportsPage lang={lang} />;
       case 'settings':
         return (
           <div style={{ maxWidth: '800px', margin: '3rem auto', padding: '0 1rem' }}>
