@@ -1,0 +1,109 @@
+:root {
+  /* Centralized Design Tokens */
+  --bg-deep-navy: #071426;
+  --panel-graphite: #111D2D;
+  --surface-secondary: #18263A;
+  --text-crisp-white: #F4F7FB;
+  --text-secondary: #AABBD0;
+  --text-muted: #64748B;
+  --accent-cyan: #28B9F5;
+  --accent-cyan-hover: #1A9ED5;
+  
+  --verdict-safe: #10B981;
+  --verdict-suspicious: #F59E0B;
+  --verdict-threat: #EF4444;
+  --verdict-neutral: #6B7280;
+
+  --border-subtle: #1E293B;
+  --border-focus: #28B9F5;
+  
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep-navy);
+  color: var(--text-crisp-white);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card & Panels */
+.qk-panel {
+  background: var(--panel-graphite);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.qk-panel-interactive {
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.qk-panel-interactive:hover {
+  border-color: #334155;
+  background: #142236;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--accent-cyan);
+  color: #071426;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-cyan-hover);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-secondary {
+  background: var(--surface-secondary);
+  color: var(--text-crisp-white);
+  font-weight: 500;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: #20334C;
+}
+
+/* Monospace Badges */
+.mono-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}

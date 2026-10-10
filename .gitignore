@@ -1,0 +1,33 @@
+# Development & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Web
+node_modules/
+dist/
+build/
+.npm/
+
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.pfx
+
+# IDEs & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Uploads & Scratch
+scratch/
+uploads/
+*.tmp
